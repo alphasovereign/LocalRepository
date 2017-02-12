@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+	<class name="com.hibernate.basic.model.Phone"  table="Phone" >
+	
+		<id name="phone_id" type="integer" >
+			<column name="phone_id" ></column>
+			<generator class="foreign">
+				<param name="property">user</param>
+			</generator>
+		</id>
+		
+		<one-to-one name="user"
+		class="com.hibernate.basic.model.User"
+		constrained="true"
+		></one-to-one>
+		
+		
+		<property name="phone_name"  type="string">
+			<column name="phone_name"></column>
+		</property>
+	
+	
+	
+	</class>
+
+</hibernate-mapping>
