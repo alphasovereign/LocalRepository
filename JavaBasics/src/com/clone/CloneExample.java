@@ -1,10 +1,22 @@
 package com.clone;
 
+import javax.swing.plaf.synth.SynthToggleButtonUI;
 import javax.xml.ws.WebServiceClient;
 
 public class CloneExample {
 
 	public static void main(String[] args) throws CloneNotSupportedException {
+		
+		// This will be my new change
+		String s= "Alpha";
+		String s2 = "Alpha";
+		String s3 = new String("Alpha");
+		String s4 = "Alpha";
+		
+		System.out.println( s==s2 );
+		System.out.println(  s == s3 );
+		System.out.println(  s4 == s3 );
+		
 		
 		B bb = new B();
 		bb.child = "Elisha";
